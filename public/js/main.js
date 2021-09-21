@@ -1,0 +1,7 @@
+// IF IT DOES NOT WORK IT IS BECAUSE THE STATIC INDEX.HTML MUST NOT BE LAUNCHED BY VISUAL STUDIO'S LIVE SERVER, 
+// BUT TYPING LOCALHOST:${PORT} ON THE BROWSER'S URL STRING FIELD
+const socket = io()
+
+socket.on('message', (message) => {
+    console.log(message)
+})

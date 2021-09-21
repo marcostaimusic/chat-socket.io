@@ -6,6 +6,7 @@
 	--light-color: #e6e9ff;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
+
 }
 
 * {
@@ -17,7 +18,8 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	background: var(--success-color);
+	/* background: linear-gradient(to bottom right, #F6EA41 , #F048C6); */
 	margin: 20px;
 }
 
