@@ -26,7 +26,8 @@ io.on('connection', (socket)=>{
     
     //listen to chat message
     socket.on('chatMessage', (msg) =>{
-        console.log(msg)
+        io.emit('message', msg)
+        //console.log(msg) loggin chat message on server console
     })
 })
 
