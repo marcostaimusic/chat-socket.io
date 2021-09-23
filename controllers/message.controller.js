@@ -10,12 +10,17 @@ const config = {
     useUnifiedTopology: true
 }
 
-
+ 
 async function writeMessage(req, res){
-    const { username, text, room } = req.body
-
+    const id = req.params.id
+    const { text, room } = req.body
+    await connect(mongoUri, config)
     try {
-        const message = new Message ({_id: new mongoose.Types.ObjectId(), username, text, room})
+        const message = new Message ({_id: new mongoose.Types.ObjectId(),
+                user: id,
+                text,
+                room
+            })
         controllerDebugger(message)
         await message.save()
         connection.close()
